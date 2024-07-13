@@ -7,10 +7,10 @@ from flask_mysqldb import MySQL
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-app.config['MYSQL_HOST'] = 'host.docker.internal' #esse host acessa a maquina local 
+app.config['MYSQL_HOST'] = 'mysql_api_container' #esse host é o nome do container onde esta rodando o mysql. é possivel definir diretamente pois eles estao compartilhando a mesma rede
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'flaskhost'
+app.config['MYSQL_DB'] = 'flaskdocker'
 
 mysql = MySQL(app)
 
