@@ -1,0 +1,29 @@
+version: '3.3'
+# ao definir um volume, modificações nos porjetos persistem as modificações no volume
+services:
+  db:
+    build: ./mysql/
+    restart: always
+    env_file:
+      - ./config/db.env
+    ports:
+      - '3306:3306'
+    networks:
+      - dockercompose
+    volumes:
+      - ./mysql/schema.sql:/docker-entrypoint-initdb.d/init.sql # mesmo esquema do dockerfile da pasta do mysql
+
+  flask:
+    depends_on:
+      - db
+    build: ./flask/
+    ports:
+      - '5000:5000'
+    restart: always
+    volumes:
+      - "D:\\Docker\\containers\\compose_5\\6_build_mount_compose\\flask:/app" # diretorio local para bind mount
+    networks:
+      - dockercompose
+
+networks:
+  dockercompose:
