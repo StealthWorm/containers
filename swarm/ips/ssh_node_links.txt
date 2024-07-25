@@ -1,0 +1,8 @@
+# NODE1 (Node Manager)
+ssh -i "node1.pem" ec2-user@ec2-15-229-5-56.sa-east-1.compute.amazonaws.com
+
+# NODE2
+ssh -i "node1.pem" ec2-user@ec2-18-230-187-93.sa-east-1.compute.amazonaws.com
+
+# NODE3
+ssh -i "node1.pem" ec2-user@ec2-15-229-109-75.sa-east-1.compute.amazonaws.com

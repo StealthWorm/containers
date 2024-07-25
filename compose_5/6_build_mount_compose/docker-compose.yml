@@ -1,5 +1,5 @@
 version: '3.3'
-# ao definir um volume, modificações nos porjetos persistem as modificações no volume
+# ao definir um volume, modificações nos projetos persistem as modificações no volume
 services:
   db:
     build: ./mysql/
