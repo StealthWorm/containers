@@ -8,6 +8,4 @@ ssh -i "node1.pem" ec2-user@ec2-54-207-237-16.sa-east-1.compute.amazonaws.com
 ssh -i "node1.pem" ec2-user@ec2-15-229-45-206.sa-east-1.compute.amazonaws.com
 
 #TOKEN PARA O JOIN (digitar nas máquinas que não são o manager)
- docker swarm join --token SWMTKN-1-1qjpd3xo5w670plmr5jpm7t0xihqjcyuli8ao6ikmaew0e40m3-91d61mnh422sgg2t3db97aup4 172.31.46.111:2377
-
- docker swarm join --token SWMTKN-1-0owf1otbus02behn8hvo8wahrxvh25oyr7bm2qr5reoh5rhgd3-e9z726huk8ev2hdbjo4cos1yn 54.232.253.120:2377
+ docker swarm join --token SWMTKN-1-3wl955wmu3v2zc4j0axxu4p8znlrdibmo258cyzhoemi7hrmsz-du0vnt7uj9952ju74fsnxxt8s 54.232.253.120:2377
