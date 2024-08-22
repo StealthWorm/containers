@@ -2,7 +2,7 @@
 apiVersion: apps/v1 #versão utilizada da ferramenta;
 kind: Deployment # tipo do arquivo (Deployment, Service);
 metadata: # descrever algum objeto, inserindo chaves como name;
-  name: flask-app-depoyment
+  name: flask-app-deployment
 spec: # especificações da Aplicação
   replicas: 4 # número de réplicas de Nodes/Pods;
   selector: # para poder nomear as specs, util para aplicações multi-container
@@ -15,4 +15,4 @@ spec: # especificações da Aplicação
     spec: # especificações do container que será rodado
       containers: # definir as especificações de containers como: nome e imagem;
         - name: flask
-          image: thierry20xx/flask-kube-projeto:2
+          image: thierry20xx/flask-kube-projeto:5
